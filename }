@@ -1,0 +1,21 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch DEVELOPTMENT
+# Changes to be committed:
+#	modified:   .gitignore
+#	new file:   config/allowedOrigins.js
+#	new file:   config/corsOptions.js
+#	new file:   config/dbConn.js
+#	new file:   controllers/usersController.js
+#	new file:   middleware/errorHandler.js
+#	new file:   middleware/logger.js
+#	new file:   models/Note.js
+#	new file:   models/User.js
+#	modified:   package-lock.json
+#	modified:   package.json
+#	modified:   routes/roots.js
+#	new file:   routes/userRoutes.js
+#	modified:   server.js
+#
