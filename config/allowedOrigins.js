@@ -1,7 +1,6 @@
 const allowedOrigins = [
-    'https://proyectosena.onrender.com',
-    'http://localhost:3000',
-    'localhost:3000'
+    'https://jgb-notes.onrender.com'
 ]
+
 
 module.exports = allowedOrigins

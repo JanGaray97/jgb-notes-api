@@ -29,13 +29,13 @@ const login = async (req, res) => {
                 "roles": foundUser.roles
             }
         },
-        process.env.ACCESS_TOKEN_SECRET,
+        `${process.env.ACCESS_TOKEN_SECRET}`,
         { expiresIn: '15m' }
     )
 
     const refreshToken = jwt.sign(
         { "username": foundUser.username },
-        process.env.REFRESH_TOKEN_SECRET,
+        `${process.env.REFRESH_TOKEN_SECRET}`,
         { expiresIn: '7d' }
     )
 
@@ -63,7 +63,7 @@ const refresh = (req, res) => {
 
     jwt.verify(
         refreshToken,
-        process.env.REFRESH_TOKEN_SECRET,
+        `${process.env.REFRESH_TOKEN_SECRET}`,
         async (err, decoded) => {
             if (err) return res.status(403).json({ message: 'Forbidden' })
 
@@ -78,7 +78,7 @@ const refresh = (req, res) => {
                         "roles": foundUser.roles
                     }
                 },
-                process.env.ACCESS_TOKEN_SECRET,
+                `${process.env.ACCESS_TOKEN_SECRET}`,
                 { expiresIn: '15m' }
             )
 
